@@ -2,67 +2,121 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>Upsilon Dev Studio</title>
+  <title>Upsilon Dev Studio – Roblox Geliştirme Stüdyosu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Upsilon Dev Studio, Roblox geliştiricileri için profesyonel build, script, mesh ve GFX hizmetleri sunan özel bir stüdyodur.">
-  <style>
-    /* Sıfırlama */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-    }
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-area">
+        <div class="logo-mark">U</div>
+        <div class="logo-text">
+          <span>Upsilon Dev Studio</span>
+          <span>Build • Script • Mesh • GFX</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="pricing.html">Fiyatlandırma</a>
+        <a href="portfolio.html">Portföy</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+    </div>
+  </header>
 
-    body {
-      background: #050811;
-      color: #f5f7ff;
-      line-height: 1.6;
-    }
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-eyebrow">Roblox Geliştirme Stüdyosu</div>
+          <h1 class="hero-title">
+            Tanrısal seviyede <span>Build, Script, Mesh ve GFX</span> üretimi.
+          </h1>
+          <p class="hero-sub">
+            Upsilon Dev Studio; Roblox projeleri için full custom, optimize
+            ve tamamen profesyonel çözümler sunar. Hazır model kit kullanmadan,
+            projene özel içerik üretiyoruz.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn-primary">
+              Discord üzerinden teklif al
+              <span>→</span>
+            </a>
+            <a href="services.html" class="btn-ghost">Hizmetleri görüntüle</a>
+          </div>
+          <div class="pills">
+            <span class="pill">SCP & Sci-Fi Tesisler</span>
+            <span class="pill">Optimize Map Tasarımı</span>
+            <span class="pill">Temiz Script Altyapısı</span>
+            <span class="pill">Blender Mesh & GFX</span>
+          </div>
+        </div>
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+        <aside class="hero-card">
+          <div class="hero-card-header">Özet</div>
+          <div class="hero-card-title">Neden Upsilon Dev Studio?</div>
+          <ul>
+            <li><span class="bullet"></span> Full custom çalışma – hazır free kit yok</li>
+            <li><span class="bullet"></span> Build, script, mesh ve GFX tek çatı altında</li>
+            <li><span class="bullet"></span> Güvenli ödeme: ItemSatış & kayıtlı süreç</li>
+            <li><span class="bullet"></span> Test sunucusunda canlı gösterim ve revizyon</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Hızlı Bakış</div>
+          <h2 class="section-title">Neler yapıyoruz?</h2>
+          <p class="section-sub">
+            Roblox projeni sıfırdan kurabilir veya mevcut projenin build, sistem ve görsel
+            taraflarını güçlendirebiliriz. Tüm süreç şeffaf, kayıtlı ve profesyonel ilerler.
+          </p>
+        </div>
 
-    header {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(5, 8, 17, 0.9);
-    }
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-icon">🧱</div>
+            <div class="card-title">Build & Map Tasarımı</div>
+            <div class="card-body">
+              SCP tesisleri, yer altı kompleksleri, laboratuvarlar, RP alanları ve
+              sci-fi senaryolar için atmosfer güçlü, optimize haritalar.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📜</div>
+            <div class="card-title">Script & Sistemler</div>
+            <div class="card-body">
+              Oyun mekaniği, envanter, UI, data-store ve SCP mantığı gibi
+              sistemlerin güvenilir ve modüler şekilde kurulması.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎨</div>
+            <div class="card-title">Mesh & GFX</div>
+            <div class="card-body">
+              Blender uyumlu mesh’ler, yüksek kalite render, logo, banner ve
+              oyun içi thumbnail çalışmaları.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-    }
-
-    .logo-mark {
-      width: 26px;
-      height: 26px;
-      border-radius: 8px;
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2025 Upsilon Dev Studio. Tüm hakları saklıdır.</span>
+      <span>Roblox Build • Script • Mesh • GFX</span>
+    </div>
+  </footer>
+</body>
+</html>
       background: radial-gradient(circle at 20% 0%, #00e5ff, #0055ff);
       display: flex;
       align-items: center;
@@ -692,3 +746,4 @@
   </script>
 </body>
 </html>
+
