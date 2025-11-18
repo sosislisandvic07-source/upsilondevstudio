@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim – Upsilon Dev Studio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim – Upsilon Dev Studio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo.png">
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <img src="assets/logo.png">
-        <h1>Upsilon Dev Studio</h1>
-    </div>
-    
+    <div class="logo"><img src="assets/logo.png"><h1>İletişim</h1></div>
     <nav>
         <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="hizmetler.html">Hizmetler</a>
         <a href="fiyat.html">Fiyatlandırma</a>
         <a href="portfoy.html">Portföy</a>
-        <a href="iletisim.html" class="btn">İletişim</a>
+        <a href="iletisim.html" class="active btn">İletişim</a>
     </nav>
+    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="services">
-    <h2>İletişim</h2>
+<div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyat.html">Fiyatlandırma</a>
+    <a href="portfoy.html">Portföy</a>
+    <a href="iletisim.html">İletişim</a>
+</div>
 
-    <div class="service-box">
-        <p>Discord Sunucusu:</p>
-        <a href="https://discord.gg/SFDJY9YGvS" class="btn">Sunucuya Katıl</a>
-    </div>
+<main class="page-content">
 
-    <div class="service-box">
-        <p>E-mail:</p>
-        <p>upsilondevstudio@gmail.com</p>
-    </div>
+<h2>İletişim</h2>
 
-</section>
+<p>Doğrudan Discord üzerinden iletişim kurabilirsiniz:</p>
 
-<footer>
-    <p>© 2025 Upsilon Dev Studio</p>
-</footer>
+<a href="https://discord.gg/SFDJY9YGvS" class="btn">Discord Sunucusuna Katıl</a>
+
+</main>
+
+<footer>© 2025 Upsilon Dev Studio</footer>
+
+<script>
+function toggleMenu(){document.getElementById("mobileNav").classList.toggle("active")}
+</script>
 
 </body>
 </html>
