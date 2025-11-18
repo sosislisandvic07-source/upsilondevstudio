@@ -421,3 +421,60 @@ body{
         font-size:28px;
     }
 }
+/* --- PORTFÖY SAYFASI --- */
+
+.page-head {
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+
+.page-head h1 {
+    font-size: 2.4rem;
+    color: #c7d9ff;
+}
+
+.page-head p {
+    color: #90a3c7;
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* Kart Alanı */
+.portfolio-cards {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+/* Tekil Kart */
+.portfolio-card {
+    width: 330px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 150, 255, 0.25);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 25px rgba(0, 120, 255, 0.15);
+    transition: 0.25s ease;
+}
+
+.portfolio-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #d0ddff;
+}
+
+.portfolio-card p {
+    color: #9fb1d5;
+    font-size: 1rem;
+}
+
+/* Hover Efekti */
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px rgba(0, 160, 255, 0.5);
+    border-color: rgba(0, 150, 255, 0.6);
+}
