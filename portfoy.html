@@ -1,61 +1,19 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portföy – Upsilon Dev Studio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/logo.png">
-</head>
-
-<body>
-
-<header class="site-header">
-    <div class="logo-area">
-        <img src="assets/logo.png" alt="Upsilon Logo">
-        <div class="logo-text">
-            <span class="studio-name">Upsilon Dev Studio</span>
-            <span class="studio-tag">Build • Script • Mesh • GFX</span>
-        </div>
-    </div>
-
-    <nav class="main-nav">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="hizmetler.html">Hizmetler</a>
-        <a href="fiyat.html">Fiyatlandırma</a>
-        <a href="portfoy.html" class="active">Portföy</a>
-        <a href="iletisim.html" class="btn-nav">İletişim</a>
-    </nav>
-</header>
-
-<section class="page-head">
+<section class="page-section">
     <h1>Portföy</h1>
-    <p>Gerçek müşteri işleri, build – script – mesh – GFX örnekleri.</p>
+    <p>Build, Script, Mesh ve GFX alanındaki tamamlanan çalışmalarımızdan örnekler.</p>
+
+    <div class="portfolio-grid">
+
+        <img src="assets/portfolio/p1.png" onclick="openLightbox(this.src)">
+        <img src="assets/portfolio/p2.png" onclick="openLightbox(this.src)">
+        <img src="assets/portfolio/p3.png" onclick="openLightbox(this.src)">
+        <img src="assets/portfolio/p4.png" onclick="openLightbox(this.src)">
+        <img src="assets/portfolio/p5.png" onclick="openLightbox(this.src)">
+        <img src="assets/portfolio/p6.png" onclick="openLightbox(this.src)">
+
+    </div>
 </section>
 
-<section class="portfolio-cards">
-
-    <div class="portfolio-card">
-        <h3>📌 Build Örnekleri</h3>
-        <p>Map, ortam ve sahne tasarımı örnekleri burada listelenecek.</p>
-    </div>
-
-    <div class="portfolio-card">
-        <h3>📌 Script Örnekleri</h3>
-        <p>GUI, sistem, AI, SCP mekanikleri ve oyun akışı örnekleri burada yer alacak.</p>
-    </div>
-
-    <div class="portfolio-card">
-        <h3>📌 Mesh / GFX</h3>
-        <p>Render, thumbnail, logo ve mesh model örnekleri burada listelenebilir.</p>
-    </div>
-
-</section>
-
-<footer class="footer">
-    © 2025 Upsilon Dev Studio – Tüm Hakları Saklıdır.
-</footer>
-
-</body>
-</html>
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
