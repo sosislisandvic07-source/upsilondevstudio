@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portföy – Upsilon Dev Studio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portföy – Upsilon Dev Studio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo.png">
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <img src="assets/logo.png">
-        <h1>Upsilon Dev Studio</h1>
-    </div>
-    
+    <div class="logo"><img src="assets/logo.png"><h1>Portföy</h1></div>
     <nav>
         <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="hizmetler.html">Hizmetler</a>
         <a href="fiyat.html">Fiyatlandırma</a>
-        <a href="portfoy.html">Portföy</a>
+        <a href="portfoy.html" class="active">Portföy</a>
         <a href="iletisim.html" class="btn">İletişim</a>
     </nav>
+    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="services">
-    <h2>Portföy</h2>
-    <p>Yakında yayınlanacak. Örnek çalışmalar eklenecek.</p>
+<div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyat.html">Fiyatlandırma</a>
+    <a href="portfoy.html">Portföy</a>
+    <a href="iletisim.html">İletişim</a>
+</div>
 
-    <div class="service-box">
-        <p>📌 Oyun haritaları</p>
-        <p>📌 SCP bölgeleri</p>
-        <p>📌 GFX çalışmaları</p>
-        <p>📌 Mesh modeller</p>
-    </div>
-</section>
+<main class="page-content">
 
-<footer>
-    <p>© 2025 Upsilon Dev Studio</p>
-</footer>
+<h2>Portföy</h2>
+<p>Yaptığımız bazı çalışmalardan örnekler:</p>
+
+<div class="portfolio-grid">
+    <div class="portfolio-item"><img src="assets/p1.png"></div>
+    <div class="portfolio-item"><img src="assets/p2.png"></div>
+    <div class="portfolio-item"><img src="assets/p3.png"></div>
+    <div class="portfolio-item"><img src="assets/p4.png"></div>
+</div>
+
+</main>
+
+<footer>© 2025 Upsilon Dev Studio</footer>
+
+<script>
+function toggleMenu(){document.getElementById("mobileNav").classList.toggle("active")}
+</script>
 
 </body>
 </html>
