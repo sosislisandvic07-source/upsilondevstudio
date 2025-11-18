@@ -1,58 +1,64 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hizmetler – Upsilon Dev Studio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hizmetler – Upsilon Dev Studio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo.png">
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <img src="assets/logo.png">
-        <h1>Upsilon Dev Studio</h1>
-    </div>
-    
+    <div class="logo"><img src="assets/logo.png"><h1>Hizmetler</h1></div>
     <nav>
         <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="hizmetler.html">Hizmetler</a>
+        <a href="hizmetler.html" class="active">Hizmetler</a>
         <a href="fiyat.html">Fiyatlandırma</a>
         <a href="portfoy.html">Portföy</a>
         <a href="iletisim.html" class="btn">İletişim</a>
     </nav>
+    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="services">
-    <h2>Hizmetlerimiz</h2>
-    <p>Profesyonel, optimize ve full custom Roblox geliştirme.</p>
+<div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyat.html">Fiyatlandırma</a>
+    <a href="portfoy.html">Portföy</a>
+    <a href="iletisim.html">İletişim</a>
+</div>
 
+<main class="page-content">
+
+<h2>Hizmetlerimiz</h2>
+
+<div class="service-grid">
     <div class="service-box">
-        <h3>🧱 Build (Harita Tasarımı)</h3>
-        <p>SCP bölgeleri, RP şehirleri, sci-fi laboratuvarları, askeri üsler ve daha fazlası.</p>
+        <h3>🧱 Build Tasarımı</h3>
+        <p>SCP tesisleri, RP alanları, koridor ve laboratuvar tasarımları.</p>
     </div>
 
     <div class="service-box">
-        <h3>🧩 Script & Sistemler</h3>
-        <p>NPC AI, güvenlik kapıları, envanter, levelling, UI sistemleri ve tam oyun mekanikleri.</p>
+        <h3>🧩 Script & Sistem</h3>
+        <p>UI, envanter, kapılar, SCP sistemleri, AI ve güvenlik mekanikleri.</p>
     </div>
 
     <div class="service-box">
-        <h3>🎨 Mesh / Blender</h3>
-        <p>Optimize low-poly & mid-poly modeller, çevresel prop’lar, özel ekipmanlar.</p>
+        <h3>🎨 Mesh & GFX</h3>
+        <p>Mesh model, prop, render, logo, banner, thumbnail tasarımı.</p>
     </div>
+</div>
 
-    <div class="service-box">
-        <h3>🖼 GFX / Banner</h3>
-        <p>3D render, logo tasarımı, oyun thumbnail, YouTube/Discord banner.</p>
-    </div>
-</section>
+</main>
 
-<footer>
-    <p>© 2025 Upsilon Dev Studio</p>
-</footer>
+<footer>© 2025 Upsilon Dev Studio</footer>
+
+<script>
+function toggleMenu(){document.getElementById("mobileNav").classList.toggle("active")}
+</script>
 
 </body>
 </html>
