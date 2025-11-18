@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiyatlandırma – Upsilon Dev Studio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiyatlandırma – Upsilon Dev Studio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo.png">
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="assets/logo.png" alt="Upsilon Logo">
-        <h1>Upsilon Dev Studio</h1>
-    </div>
-    
+    <div class="logo"><img src="assets/logo.png"><h1>Fiyatlandırma</h1></div>
     <nav>
         <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
@@ -23,175 +19,69 @@
         <a href="portfoy.html">Portföy</a>
         <a href="iletisim.html" class="btn">İletişim</a>
     </nav>
+    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<main>
-    <section class="pricing-page">
-        <div class="pricing-header">
-            <h1>💰 Upsilon Dev Studio – Güncel Fiyatlandırma</h1>
-            <p>
-                Tüm hizmetlerimiz saatlik veya proje bazlıdır. Fiyatlar işin kapsamına, zorluk derecesine
-                ve teslim süresine göre netleştirilir. Kesin fiyat için Discord sunucumuzdaki
-                <strong>#sipariş-talebi</strong> kanalını kullanın.
-            </p>
-        </div>
+<div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyat.html">Fiyatlandırma</a>
+    <a href="portfoy.html">Portföy</a>
+    <a href="iletisim.html">İletişim</a>
+</div>
 
-        <!-- BUILDER -->
-        <div class="pricing-section">
-            <div class="pricing-title">🛠️ BUILDER (Harita & Sahne)</div>
-            <hr class="pricing-divider" />
-            <div class="pricing-box">
-                <div class="pricing-line">
-                    <span class="label">Standart</span>
-                    <span class="value">80₺ / saat</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Orta</span>
-                    <span class="value">100₺ / saat</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Yüksek Detay</span>
-                    <span class="value">120–150₺ / saat</span>
-                </div>
+<main class="page-content">
 
-                <div class="pricing-tags">
-                    ✔ Modelleme &nbsp; ✔ Ortam tasarımı &nbsp; ✔ Optimizasyon &nbsp; ✔ Işıklandırma &nbsp; ✔ SCP / RP / Realistic sahneler
-                </div>
-            </div>
-        </div>
+<h2>Fiyatlandırma</h2>
 
-        <!-- SCRIPTER -->
-        <div class="pricing-section">
-            <div class="pricing-title">🧩 SCRIPTER (Sistemler)</div>
-            <hr class="pricing-divider" />
-            <div class="pricing-box">
-                <div class="pricing-line">
-                    <span class="label">Basit Sistemler</span>
-                    <span class="value">150–300₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Orta Seviye Sistemler</span>
-                    <span class="value">300–700₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Kompleks Sistemler</span>
-                    <span class="value">800–1500₺+</span>
-                </div>
+<div class="price-card">
+<h3>🧱 Build Tasarımı</h3>
+<ul>
+<li>Standart – 80₺/s</li>
+<li>Orta – 100₺/s</li>
+<li>Yüksek Detay – 120–150₺/s</li>
+</ul>
+</div>
 
-                <div class="pricing-tags">
-                    ✔ GUI &nbsp; ✔ Envanter & seviye sistemi &nbsp; ✔ SCP mekanikleri &nbsp;
-                    ✔ NPC / AI &nbsp; ✔ Data-store &nbsp; ✔ Tam oyun sistem paketleri
-                </div>
-            </div>
-        </div>
+<div class="price-card">
+<h3>🧩 Script & Sistem</h3>
+<ul>
+<li>Basit – 150–300₺</li>
+<li>Orta – 300–700₺</li>
+<li>Kompleks – 800–1500₺+</li>
+</ul>
+</div>
 
-        <!-- MESH -->
-        <div class="pricing-section">
-            <div class="pricing-title">🎨 MESH ARTIST (Blender)</div>
-            <hr class="pricing-divider" />
-            <div class="pricing-box">
-                <div class="pricing-line">
-                    <span class="label">Basit Mesh</span>
-                    <span class="value">50–150₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Orta Detay</span>
-                    <span class="value">200–400₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Detaylı Model</span>
-                    <span class="value">500–1200₺+</span>
-                </div>
+<div class="price-card">
+<h3>🎨 Mesh & GFX</h3>
+<ul>
+<li>Basit Mesh – 50–150₺</li>
+<li>Orta – 200–400₺</li>
+<li>Detaylı – 500–1200₺+</li>
+</ul>
+</div>
 
-                <div class="pricing-tags">
-                    ✔ Prop & çevre objeleri &nbsp; ✔ Karakter parçaları &nbsp; ✔ Araç / makine &nbsp;
-                    ✔ Low / Mid poly &nbsp; ✔ UV & Texture (isteğe bağlı)
-                </div>
-            </div>
-        </div>
+<div class="price-card">
+<h3>📦 Paket Çalışmalar</h3>
+<ul>
+<li>Mini – 300–600₺</li>
+<li>Orta – 800–2000₺</li>
+<li>Büyük – 2500–8000₺+</li>
+</ul>
+</div>
 
-        <!-- GFX -->
-        <div class="pricing-section">
-            <div class="pricing-title">🖼️ GFX (Render / Banner)</div>
-            <hr class="pricing-divider" />
-            <div class="pricing-box">
-                <div class="pricing-line">
-                    <span class="label">Profil Fotoğrafı</span>
-                    <span class="value">50–100₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Banner (YouTube / Discord)</span>
-                    <span class="value">100–150₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Thumbnail</span>
-                    <span class="value">70–120₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Logo Tasarımı</span>
-                    <span class="value">150–400₺</span>
-                </div>
-
-                <div class="pricing-tags">
-                    ✔ Realistic render &nbsp; ✔ Roblox karakter çalışmaları &nbsp;
-                    ✔ 2D / 3D logo &nbsp; ✔ Oyun kapağı & banner tasarımı
-                </div>
-            </div>
-        </div>
-
-        <!-- PAKETLER -->
-        <div class="pricing-section">
-            <div class="pricing-title">📦 PAKET FİYATLARI</div>
-            <hr class="pricing-divider" />
-            <div class="pricing-box">
-                <div class="pricing-line">
-                    <span class="label">Mini Proje Paketi</span>
-                    <span class="value">300–600₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Orta Proje (Map + Script)</span>
-                    <span class="value">800–2000₺</span>
-                </div>
-                <div class="pricing-line">
-                    <span class="label">Büyük Proje (Tam oyun)</span>
-                    <span class="value">2500–8000₺+</span>
-                </div>
-
-                <div class="pricing-tags">
-                    Paketlerde fiyat; haritanın boyutu, sistem karmaşıklığı, revize sayısı
-                    ve teslim süresine göre netleştirilir.
-                </div>
-            </div>
-        </div>
-
-        <!-- ÖNEMLİ NOTLAR -->
-        <div class="pricing-section">
-            <div class="pricing-title">🔒 ÖNEMLİ NOTLAR</div>
-            <hr class="pricing-divider" />
-            <div class="pricing-box">
-                <ul style="font-size:0.88rem; color:#d7dbff; padding-left:1.1rem; list-style:disc;">
-                    <li>Kapora ödemesi yapılmadan projeye başlanmaz.</li>
-                    <li>Kapora iadesi yoktur; proje için ayrılan zaman ve planlama kapora ile kilitlenir.</li>
-                    <li>Tahmini süre bilgisi, iş başlamadan önce Discord üzerinden paylaşılır.</li>
-                    <li>Revizeler işin zorluk derecesine göre belirlenir; ekstra revizeler ek ücrete tabi olabilir.</li>
-                    <li>Büyük projelerde ekip halinde çalışma sağlanabilir.</li>
-                </ul>
-            </div>
-
-            <div class="note-box">
-                <strong>Not:</strong> Zamanla fiyatlarda güncelleme yapılabilir. En güncel rakamlar ve
-                kampanyalar için Discord sunucumuzdaki <strong>#fiyatlandırma</strong> ve
-                <strong>#duyurular</strong> kanallarını kontrol edin. Ödeme yaparken makbuz veya ekran görüntüsü
-                almanız, olası bir sorunda kanıt olarak size avantaj sağlar.
-            </div>
-        </div>
-    </section>
 </main>
 
-<footer>
-    <span>© 2025 Upsilon Dev Studio – Fiyatlar iş kapsamına göre değişiklik gösterebilir.</span>
-    <span>Detaylı teklif için: Discord → #sipariş-talebi / #destek</span>
-</footer>
+<footer>© 2025 Upsilon Dev Studio</footer>
+
+<script>
+function toggleMenu(){document.getElementById("mobileNav").classList.toggle("active")}
+</script>
+
+</body>
+</html>
+
 
 </body>
 </html>
