@@ -1,86 +1,173 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fiyatlandırma – Upsilon Dev Studio</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="assets/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiyatlandırma – Upsilon Dev Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
 </head>
 <body>
 
-<header>
-    <div class="logo"><img src="assets/logo.png"><h1>Fiyatlandırma</h1></div>
-    <nav>
+<header class="site-header">
+    <div class="logo-area">
+        <img src="assets/logo.png" alt="Upsilon Dev Studio">
+        <div class="logo-text">
+            <span class="studio-name">Upsilon Dev Studio</span>
+            <span class="studio-tag">Build • Script • Mesh • GFX</span>
+        </div>
+    </div>
+
+    <nav class="main-nav">
         <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="hizmetler.html">Hizmetler</a>
         <a href="fiyat.html" class="active">Fiyatlandırma</a>
         <a href="portfoy.html">Portföy</a>
-        <a href="iletisim.html" class="btn">İletişim</a>
+        <a href="iletisim.html" class="btn-nav">İletişim</a>
     </nav>
-    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+
+    <button class="mobile-menu-btn" aria-label="Menüyü Aç/Kapat">
+        ☰
+    </button>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
+<nav class="mobile-nav">
     <a href="index.html">Ana Sayfa</a>
     <a href="hakkimizda.html">Hakkımızda</a>
     <a href="hizmetler.html">Hizmetler</a>
-    <a href="fiyat.html">Fiyatlandırma</a>
+    <a href="fiyat.html" class="active">Fiyatlandırma</a>
     <a href="portfoy.html">Portföy</a>
     <a href="iletisim.html">İletişim</a>
-</div>
+</nav>
 
-<main class="page-content">
+<main class="section pricing-page">
 
-<h2>Fiyatlandırma</h2>
+    <div class="section-header reveal">
+        <h1>Güncel Fiyatlandırma</h1>
+        <p>
+            Tüm hizmetlerimiz saatlik veya proje bazlıdır.  
+            Fiyatlar, işin kapsamına ve detay seviyesine göre değişebilir.
+            Kesin fiyat için iletişim sayfasından form doldurabilir veya Discord üzerinden ulaşabilirsin.
+        </p>
+    </div>
 
-<div class="price-card">
-<h3>🧱 Build Tasarımı</h3>
-<ul>
-<li>Standart – 80₺/s</li>
-<li>Orta – 100₺/s</li>
-<li>Yüksek Detay – 120–150₺/s</li>
-</ul>
-</div>
+    <!-- BUILDER -->
+    <section class="price-block reveal">
+        <h2>🛠️ Builder – Harita & Sahne</h2>
+        <div class="price-card">
+            <h3>Saatlik Çalışma</h3>
+            <ul>
+                <li><strong>Standart:</strong> 80₺ / saat</li>
+                <li><strong>Orta Detay:</strong> 100₺ / saat</li>
+                <li><strong>Yüksek Detay / Kompleks:</strong> 120–150₺ / saat</li>
+            </ul>
+            <p class="price-note">
+                Modelleme, ortam tasarımı, ışıklandırma, optimizasyon ve SCP / RP / sci-fi alanları dahildir.
+            </p>
+        </div>
+    </section>
 
-<div class="price-card">
-<h3>🧩 Script & Sistem</h3>
-<ul>
-<li>Basit – 150–300₺</li>
-<li>Orta – 300–700₺</li>
-<li>Kompleks – 800–1500₺+</li>
-</ul>
-</div>
+    <!-- SCRIPTER -->
+    <section class="price-block reveal">
+        <h2>🧩 Scripter – Sistemler</h2>
+        <div class="price-card">
+            <h3>Paket Aralığı</h3>
+            <ul>
+                <li><strong>Basit Sistemler:</strong> 150–300₺</li>
+                <li><strong>Orta Seviye:</strong> 300–700₺</li>
+                <li><strong>Kompleks:</strong> 800–1500₺+</li>
+            </ul>
+            <p class="price-note">
+                GUI, envanter, level, SCP mekanikleri, NPC &amp; AI, veri kayıt sistemleri ve tam oyun sistem paketleri.
+            </p>
+        </div>
+    </section>
 
-<div class="price-card">
-<h3>🎨 Mesh & GFX</h3>
-<ul>
-<li>Basit Mesh – 50–150₺</li>
-<li>Orta – 200–400₺</li>
-<li>Detaylı – 500–1200₺+</li>
-</ul>
-</div>
+    <!-- MESH -->
+    <section class="price-block reveal">
+        <h2>🎨 Mesh Artist – Blender</h2>
+        <div class="price-card">
+            <h3>Mesh Üretimi</h3>
+            <ul>
+                <li><strong>Basit Mesh:</strong> 50–150₺</li>
+                <li><strong>Orta Detay:</strong> 200–400₺</li>
+                <li><strong>Yüksek Detay:</strong> 500–1200₺+</li>
+            </ul>
+            <p class="price-note">
+                Prop, environment mesh, karakter parçaları, araç/makine, low/mid-poly uyumlu modeller, UV unwrap + texture.
+            </p>
+        </div>
+    </section>
 
-<div class="price-card">
-<h3>📦 Paket Çalışmalar</h3>
-<ul>
-<li>Mini – 300–600₺</li>
-<li>Orta – 800–2000₺</li>
-<li>Büyük – 2500–8000₺+</li>
-</ul>
-</div>
+    <!-- GFX -->
+    <section class="price-block reveal">
+        <h2>🖼️ GFX – Render / Banner</h2>
+        <div class="price-card">
+            <h3>Görsel Paketler</h3>
+            <ul>
+                <li><strong>Profil Fotoğrafı:</strong> 50–100₺</li>
+                <li><strong>YouTube / Discord Banner:</strong> 100–150₺</li>
+                <li><strong>Oyun İçi Thumbnail:</strong> 70–120₺</li>
+                <li><strong>Özel Logo Tasarımı:</strong> 150–400₺</li>
+            </ul>
+            <p class="price-note">
+                Realistic render, Roblox karakter çalışmaları, 2D/3D logo ve kapak tasarımları.
+            </p>
+        </div>
+    </section>
+
+    <!-- PAKETLER -->
+    <section class="price-block reveal">
+        <h2>📦 Paket Fiyatları</h2>
+        <div class="price-card">
+            <ul>
+                <li><strong>Mini Proje:</strong> 300–600₺</li>
+                <li><strong>Orta Proje (Map + Script):</strong> 800–2000₺</li>
+                <li><strong>Büyük Proje (Tam Oyun):</strong> 2500–8000₺+</li>
+            </ul>
+            <p class="price-note">
+                Paketlerde fiyat, işin kapsamına ve süre/ekip ihtiyacına göre belirlenir.
+            </p>
+        </div>
+    </section>
+
+    <!-- NOTLAR -->
+    <section class="price-block reveal">
+        <h2>🔒 Önemli Notlar</h2>
+        <div class="price-card">
+            <ul>
+                <li>Kapora ödemesi alınmadan işe başlanmaz.</li>
+                <li>Kapora iadesi yapılmaz.</li>
+                <li>Çalışma süresi şeffaf şekilde paylaşılır.</li>
+                <li>Revizeler işin zorluk derecesine göre planlanır.</li>
+                <li>Büyük projelerde ekip ile birlikte çalışma yapılabilir.</li>
+                <li>Zamanla fiyatlarda güncelleme yapılabilir.</li>
+            </ul>
+            <p class="price-note">
+                Ödemeleri ItemSatış veya Papara ile alıyoruz.  
+                Ödeme sırasında kayıt / ekran görüntüsü alman, olası bir durumda kanıt olarak işine yarar.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-footer-cta reveal">
+        <a href="iletisim.html" class="btn primary">Fiyat Almak İstiyorum</a>
+    </div>
 
 </main>
 
-<footer>© 2025 Upsilon Dev Studio</footer>
+<footer class="site-footer">
+    <p>© 2025 Upsilon Dev Studio. Tüm hakları saklıdır.</p>
+    <p class="footer-sub">
+        Fiyatlar bilgilendirme amaçlıdır, son fiyat teklif ile netleşir.
+    </p>
+</footer>
 
-<script>
-function toggleMenu(){document.getElementById("mobileNav").classList.toggle("active")}
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
+
 
 
 </body>
