@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim – Upsilon Dev Studio</title>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="page-contact">
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="Upsilon Dev Studio Logo">
+            <div class="brand-text">
+                <span class="brand-name">Upsilon Dev Studio</span>
+                <span class="brand-tag">Build • Script • Mesh • GFX</span>
+            </div>
+        </a>
+
+        <button class="nav-toggle" aria-label="Menüyü Aç/Kapat">
+            <span></span><span></span>
+        </button>
+
+        <nav class="main-nav">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="hizmetler.html">Hizmetler</a>
+            <a href="fiyat.html">Fiyatlandırma</a>
+            <a href="portfoy.html">Portföy</a>
+            <a href="iletisim.html" class="btn-nav active">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero small">
+        <div class="hero-gradient"></div>
+        <div class="page-hero-inner">
+            <h1>İletişim & Teklif</h1>
+            <p>Projeni anlat, sana özel net bir teklif ve tahmini teslim süresi çıkaralım.</p>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="two-col contact-wrapper">
+            <div>
+                <h2>Hızlı İletişim Formu</h2>
+                <p class="small">
+                    Bu form statiktir; doldurduğunda mail göndermez. Ama hangi bilgileri toplamak istediğini
+                    kafanda netleştirmek için kullanabilirsin. Gerçek iletişim için Discord linkini kullanacağız.
+                </p>
+
+                <form class="contact-form" onsubmit="return false;">
+                    <label>
+                        Roblox kullanıcı adın veya takma adın
+                        <input type="text" placeholder="Örn: sosislisandvic07">
+                    </label>
+
+                    <label>
+                        İstediğin hizmet türü
+                        <select>
+                            <option>Build / Map Tasarımı</option>
+                            <option>Script / Sistemler</option>
+                            <option>Mesh / GFX</option>
+                            <option>Full paket (Map + Script + GFX)</option>
+                            <option>Sadece danışmanlık / fikir</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Proje hakkında kısa özet
+                        <textarea rows="4" placeholder="Harita türü, mekanikler, özel istekler..."></textarea>
+                    </label>
+
+                    <label>
+                        Tercih ettiğin iletişim şekli
+                        <input type="text" placeholder="Discord kullanıcı adın / mail vb.">
+                    </label>
+
+                    <button class="btn primary" type="submit">Formu örnek olarak kaydet</button>
+                </form>
+            </div>
+
+            <div>
+                <h2>Discord üzerinden iletişim</h2>
+                <p>
+                    Tüm gerçek iletişim, teklif ve proje süreçleri Discord sunucumuz üzerinden yürütülür.
+                    Sunucuya katıldığında sana uygun kanallara yönlendirilirsin.
+                </p>
+                <ul class="bullet-list">
+                    <li><strong>#yardım-talebi</strong> – Genel sorular ve hızlı cevaplar</li>
+                    <li><strong>#sipariş-talebi</strong> – Yeni proje / iş talebi oluşturma</li>
+                    <li><strong>#teslim-onayları</strong> – Teslim edilen işlerin kaydı ve onayı</li>
+                </ul>
+                <a href="https://discord.gg/SFDJY9YGvS" target="_blank" rel="noopener" class="btn ghost full">
+                    Discord Sunucusuna Katıl
+                </a>
+                <p class="small">
+                    Ödemeler, kapora bilgisi, teslim tarihleri ve revizyon şartları; sunucuda açılan özel kanal üzerinden
+                    yazılı olarak netleştirilir. Böylece her iki taraf için de süreç kayıt altında olur.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Upsilon Dev Studio – Tüm Hakları Saklıdır.</p>
+</footer>
+
+</body>
+</html>
