@@ -1,64 +1,95 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hizmetler – Upsilon Dev Studio</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="assets/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetler – Upsilon Dev Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
 </head>
 <body>
 
-<header>
-    <div class="logo"><img src="assets/logo.png"><h1>Hizmetler</h1></div>
-    <nav>
+<header class="site-header">
+    <div class="logo-area">
+        <img src="assets/logo.png">
+        <div class="logo-text">
+            <span class="studio-name">Upsilon Dev Studio</span>
+            <span class="studio-tag">Build • Script • Mesh • GFX</span>
+        </div>
+    </div>
+
+    <nav class="main-nav">
         <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="hizmetler.html" class="active">Hizmetler</a>
         <a href="fiyat.html">Fiyatlandırma</a>
         <a href="portfoy.html">Portföy</a>
-        <a href="iletisim.html" class="btn">İletişim</a>
+        <a href="iletisim.html" class="btn-nav">İletişim</a>
     </nav>
-    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+
+    <button class="mobile-menu-btn">☰</button>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
+<nav class="mobile-nav">
     <a href="index.html">Ana Sayfa</a>
     <a href="hakkimizda.html">Hakkımızda</a>
-    <a href="hizmetler.html">Hizmetler</a>
+    <a href="hizmetler.html" class="active">Hizmetler</a>
     <a href="fiyat.html">Fiyatlandırma</a>
     <a href="portfoy.html">Portföy</a>
     <a href="iletisim.html">İletişim</a>
-</div>
+</nav>
 
-<main class="page-content">
+<main class="section">
 
-<h2>Hizmetlerimiz</h2>
-
-<div class="service-grid">
-    <div class="service-box">
-        <h3>🧱 Build Tasarımı</h3>
-        <p>SCP tesisleri, RP alanları, koridor ve laboratuvar tasarımları.</p>
+    <div class="section-header reveal">
+        <h1>Hizmetlerimiz</h1>
+        <p>Roblox üzerindeki tüm profesyonel geliştirme süreçlerini üstleniyoruz.</p>
     </div>
 
-    <div class="service-box">
-        <h3>🧩 Script & Sistem</h3>
-        <p>UI, envanter, kapılar, SCP sistemleri, AI ve güvenlik mekanikleri.</p>
-    </div>
+    <div class="service-grid">
 
-    <div class="service-box">
-        <h3>🎨 Mesh & GFX</h3>
-        <p>Mesh model, prop, render, logo, banner, thumbnail tasarımı.</p>
+        <div class="service-card reveal">
+            <h3>🧱 Build & Map</h3>
+            <p>Atmosferik, optimize ve detaylı map tasarımı.</p>
+            <ul>
+                <li>SCP tesisleri</li>
+                <li>RP mapleri</li>
+                <li>Sci-fi laboratuvar</li>
+                <li>Low/Mid poly ortam</li>
+            </ul>
+        </div>
+
+        <div class="service-card reveal">
+            <h3>🧩 Script Sistemleri</h3>
+            <p>Temiz kod, modüler yapı ve optimize sistemler.</p>
+            <ul>
+                <li>GUI & HUD</li>
+                <li>Envanter & level sistemi</li>
+                <li>Access-card kapı sistemi</li>
+                <li>NPC & AI</li>
+            </ul>
+        </div>
+
+        <div class="service-card reveal">
+            <h3>🎨 Mesh & GFX</h3>
+            <p>Blender mesh + oyun içi tüm grafik tasarımları.</p>
+            <ul>
+                <li>Mesh model</li>
+                <li>UV + Texture</li>
+                <li>Render & Banner</li>
+                <li>Thumbnail + Logo</li>
+            </ul>
+        </div>
+
     </div>
-</div>
 
 </main>
 
-<footer>© 2025 Upsilon Dev Studio</footer>
+<footer class="site-footer">
+    <p>© 2025 Upsilon Dev Studio – Tüm Hakları Saklıdır.</p>
+</footer>
 
-<script>
-function toggleMenu(){document.getElementById("mobileNav").classList.toggle("active")}
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
+
