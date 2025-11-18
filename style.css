@@ -1,0 +1,98 @@
+/* Upsilon Dev Studio – Global Tema */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #151932 0%, #05060a 50%, #020308 100%);
+    color: #e0e0ff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    width: 55px;
+}
+
+nav a {
+    margin-left: 25px;
+    color: #cbd3ff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #7a8cff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #4a5cff;
+    color: white !important;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #343fd9;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.big {
+    padding: 16px 30px;
+    font-size: 1.2rem;
+}
+
+/* SERVICE */
+.services {
+    padding: 3rem;
+    text-align: center;
+}
+
+.service-box {
+    margin: 2rem auto;
+    max-width: 650px;
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    border-color: #4a5cff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
