@@ -9,76 +9,154 @@
 </head>
 <body>
 
-<script>
-function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("active");
-}
-</script>
-
-<header>
-    <div class="logo">
-        <img src="assets/logo.png">
-        <h1>Upsilon Dev Studio</h1>
+<header class="site-header">
+    <div class="logo-area">
+        <img src="assets/logo.png" alt="Upsilon Dev Studio">
+        <div class="logo-text">
+            <span class="studio-name">Upsilon Dev Studio</span>
+            <span class="studio-tag">Build • Script • Mesh • GFX</span>
+        </div>
     </div>
 
-    <nav>
+    <nav class="main-nav">
         <a href="index.html" class="active">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="hizmetler.html">Hizmetler</a>
         <a href="fiyat.html">Fiyatlandırma</a>
         <a href="portfoy.html">Portföy</a>
-        <a href="iletisim.html" class="btn">İletişim</a>
+        <a href="iletisim.html" class="btn-nav">İletişim</a>
     </nav>
 
-    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+    <button class="mobile-menu-btn" aria-label="Menüyü Aç/Kapat">
+        ☰
+    </button>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-    <div class="logo-area">
-        <img src="assets/logo.png">
-        <h2>Upsilon Dev</h2>
-    </div>
-
-    <a href="index.html">Ana Sayfa</a>
+<!-- Mobil menü -->
+<nav class="mobile-nav">
+    <a href="index.html" class="active">Ana Sayfa</a>
     <a href="hakkimizda.html">Hakkımızda</a>
     <a href="hizmetler.html">Hizmetler</a>
     <a href="fiyat.html">Fiyatlandırma</a>
     <a href="portfoy.html">Portföy</a>
     <a href="iletisim.html">İletişim</a>
-</div>
+</nav>
 
-<section class="hero">
-    <h2>Profesyonel <span>Roblox Geliştirme</span></h2>
-    <p>Build, Script, Mesh ve GFX alanlarında tanrısal seviye geliştirme hizmeti.</p>
+<main>
 
-    <a href="fiyat.html" class="btn">Fiyatlandırmayı Gör</a>
-    <a href="iletisim.html" class="btn outline">Discord’dan Sipariş Ver</a>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text reveal">
+                <p class="hero-tag">Roblox Geliştirme Stüdyosu</p>
+                <h1>
+                    Profesyonel <span>Build, Script, Mesh &amp; GFX</span> üretimi.
+                </h1>
+                <p class="hero-desc">
+                    Upsilon Dev Studio; Roblox projelerin için full custom, optimize ve tamamen sana özel içerik üretir.
+                    Hazır model kit yok, her proje kendi yapına göre tasarlanır ve test sunucusunda canlı olarak teslim edilir.
+                </p>
 
-<section class="services">
-    <h2>Hizmetlerimiz</h2>
+                <div class="hero-actions">
+                    <a href="fiyat.html" class="btn primary">Fiyatlandırmayı Gör</a>
+                    <a href="iletisim.html" class="btn ghost">Discord Üzerinden Teklif Al</a>
+                </div>
+            </div>
 
-    <div class="service-grid">
-        <div class="service-box">
-            <h3>🧱 Build Tasarımı</h3>
-            <p>SCP tesisleri, RP alanları, laboratuvarlar ve özel map tasarımları.</p>
+            <div class="hero-banner reveal">
+                <div class="banner-frame">
+                    <img src="assets/banner.png" alt="Upsilon Dev Studio Banner">
+                </div>
+                <div class="banner-info">
+                    <span class="badge">Full Custom</span>
+                    <span class="badge">Optimize</span>
+                    <span class="badge">Test Sunuculu Teslimat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HİZMET ÖZETİ -->
+    <section class="section services">
+        <div class="section-header reveal">
+            <h2>Ne yapıyoruz?</h2>
+            <p>
+                Roblox projenin hem teknik hem görsel tarafını üst seviye kaliteye çıkarıyoruz.  
+                Build, script, mesh ve GFX tek bir stüdyo altında, tek bir akışta ilerliyor.
+            </p>
         </div>
 
-        <div class="service-box">
-            <h3>🧩 Script & Sistem</h3>
-            <p>UI, envanter, SCP mekanikleri, güvenlik sistemleri, AI ve oyun akışları.</p>
-        </div>
+        <div class="service-grid">
+            <article class="service-card reveal">
+                <h3>🧱 Build &amp; Map Tasarımı</h3>
+                <p>
+                    SCP tesisleri, sci-fi laboratuvarlar, RP mapleri, güvenlik alanları ve
+                    atmosferik ortam tasarımları. Performans dostu, optimize edilmiş haritalar.
+                </p>
+                <ul>
+                    <li>Low–poly &amp; mid-poly optimizasyon</li>
+                    <li>Işık, gölge ve post-processing ayarları</li>
+                    <li>Roleplay akışına uygun mimari</li>
+                </ul>
+            </article>
 
-        <div class="service-box">
-            <h3>🎨 Mesh & GFX</h3>
-            <p>Blender mesh, icon, thumbnail ve yüksek kaliteli render tasarımları.</p>
-        </div>
-    </div>
-</section>
+            <article class="service-card reveal">
+                <h3>🧩 Script &amp; Sistemler</h3>
+                <p>
+                    Stabil ve modüler sistem yapıları. Oyun mekaniği, GUI, envanter, seviye,
+                    güvenlik ve SCP mekanikleri tek çatı altında tasarlanır.
+                </p>
+                <ul>
+                    <li>GUI &amp; HUD sistemleri</li>
+                    <li>Envanter / level / progression</li>
+                    <li>NPC &amp; AI, access-card ve veri kayıt sistemleri</li>
+                </ul>
+            </article>
 
-<footer>
-    © 2025 Upsilon Dev Studio – Tüm Hakları Saklıdır.
+            <article class="service-card reveal">
+                <h3>🎨 Mesh &amp; GFX</h3>
+                <p>
+                    Blender uyumlu mesh üretimi, oyun içi prop’lar, render, thumbnail, logo ve
+                    banner tasarımları. Marka kimliğini oyununa taşı.
+                </p>
+                <ul>
+                    <li>Custom mesh ve UV mapping</li>
+                    <li>Realistic / stylized render</li>
+                    <li>Thumbnail, logo ve banner paketleri</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- HIZLI ÖZET / CTA -->
+    <section class="section highlight reveal">
+        <h2>Neden Upsilon Dev Studio?</h2>
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <h4>Hazır kit yok, full custom</h4>
+                <p>Proje, baştan sona sadece senin oyunun için inşa edilir.</p>
+            </div>
+            <div class="highlight-item">
+                <h4>Test sunucusunda teslim</h4>
+                <p>Her iş, özel test sunucusunda gösterilir, revizyonlar orada alınır.</p>
+            </div>
+            <div class="highlight-item">
+                <h4>Güvenli ödeme & kayıt</h4>
+                <p>ItemSatış / Papara ile güvenli ödeme, işlem kayıtları ve teslim onayları.</p>
+            </div>
+        </div>
+        <a href="iletisim.html" class="btn primary centered">Projeni Konuşalım</a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Upsilon Dev Studio. Tüm hakları saklıdır.</p>
+    <p class="footer-sub">
+        Build • Script • Mesh • GFX | Tüm süreçler Discord sunucumuz üzerinden yönetilir.
+    </p>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
