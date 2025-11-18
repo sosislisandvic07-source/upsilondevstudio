@@ -5,50 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımızda – Upsilon Dev Studio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
 </head>
 
 <body>
 
+<!-- HEADER + MOBIL MENU (TÜM SAYFALARDA AYNI OLMALI) -->
 <header>
     <div class="logo">
-        <img src="assets/logo.png">
+        <img src="assets/logo.png" alt="Upsilon Logo">
         <h1>Upsilon Dev Studio</h1>
     </div>
-    
+
     <nav>
         <a href="index.html">Ana Sayfa</a>
-        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="hakkimizda.html" class="active">Hakkımızda</a>
         <a href="hizmetler.html">Hizmetler</a>
         <a href="fiyat.html">Fiyatlandırma</a>
         <a href="portfoy.html">Portföy</a>
         <a href="iletisim.html" class="btn">İletişim</a>
     </nav>
+
+    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="services">
-    <h2>Biz Kimiz?</h2>
-    <p>Upsilon Dev Studio, Roblox geliştiricilerine özel profesyonel Build, Script, Mesh ve GFX üretimi yapan bir tasarım & yazılım stüdyosudur.</p>
-
-    <div class="service-box">
-        <h3>🎯 Amacımız</h3>
-        <p>Her müşteriye, full custom ve optimize edilmiş yüksek kaliteli projeler sunmak.</p>
+<div class="mobile-nav" id="mobileNav">
+    <div class="logo-area">
+        <img src="assets/logo.png" alt="logo">
+        <h2>Upsilon Dev</h2>
     </div>
 
-    <div class="service-box">
-        <h3>🛠 Teknolojiler</h3>
-        <p>Roblox Studio, Luau, Blender, Photoshop, Illustrator, AI araçları.</p>
-    </div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyat.html">Fiyatlandırma</a>
+    <a href="portfoy.html">Portföy</a>
+    <a href="iletisim.html">İletişim</a>
+</div>
+<!-- BİTİŞ -->
 
-    <div class="service-box">
-        <h3>🔒 Güven</h3>
-        <p>Tüm işlemler ItemSatış & Papara üzerinden güvenli şekilde yapılır.</p>
-    </div>
+<main class="page-content">
 
-</section>
+    <h2>Hakkımızda</h2>
+    <p>
+        Upsilon Dev Studio, Roblox oyun geliştiricilerine profesyonel Build, Script, Mesh ve GFX hizmetleri sunan 
+        özel bir geliştirme stüdyosudur. Tüm projeler full custom olarak hazırlanır ve müşteri odaklı ilerler.
+    </p>
+
+    <p>
+        2025 yılından bu yana yüzlerce proje, harita, sistem ve mesh çalışması teslim ettik. 
+        Optimizasyon, tasarım, performans ve oyun akışı konularında üst seviye standartlar sunuyoruz.
+    </p>
+
+</main>
 
 <footer>
-    <p>© 2025 Upsilon Dev Studio</p>
+    <span>© 2025 Upsilon Dev Studio – Tüm Hakları Saklıdır.</span>
+    <span>Detaylı süreç & belgeler: Discord sunucumuz üzerinden paylaşılır.</span>
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobileNav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
