@@ -1,6 +1,6 @@
 /* ============================================
    GENEL AYARLAR
-================================================ */
+============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
 }
 
 html, body {
-    background: #0a0a0a;
+    background: #000000;
     color: #ffffff;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -29,7 +29,7 @@ html, body {
 
 /* ============================================
    LOADER
-================================================ */
+============================================ */
 #loader {
     position: fixed;
     top: 0; left: 0;
@@ -44,12 +44,12 @@ html, body {
 }
 
 #loader .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #222;
+    width: 55px;
+    height: 55px;
+    border: 6px solid #222;
     border-top-color: #fff;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 0.8s linear infinite;
 }
 
 #loader p {
@@ -63,13 +63,13 @@ html, body {
 
 /* ============================================
    COOKIE BANNER
-================================================ */
+============================================ */
 .cookie-banner {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #111;
-    border-top: 1px solid #555;
+    background: #080808;
+    border-top: 1px solid #444;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -87,16 +87,16 @@ html, body {
 
 /* ============================================
    NAVBAR
-================================================ */
+============================================ */
 .navbar {
     width: 100%;
-    padding: 20px 50px;
+    padding: 22px 50px;
     position: fixed;
     top: 0;
     left: 0;
     background: rgba(5, 5, 5, 0.85);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,13 +128,13 @@ html, body {
 
 #mobileMenuBtn {
     display: none;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
 }
 
 /* ============================================
    MOBILE MENU
-================================================ */
+============================================ */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -150,8 +150,8 @@ html, body {
 }
 
 /* ============================================
-   HERO SECTION
-================================================ */
+   HERO
+============================================ */
 .hero {
     height: 100vh;
     position: relative;
@@ -162,48 +162,55 @@ html, body {
     padding-top: 80px;
 }
 
-/* Parallax Layers */
 .parallax-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     top: 0; left: 0;
+    overflow: hidden;
     z-index: -1;
 }
 
 .parallax-bg .layer {
     position: absolute;
-    width: 110%;
-    height: 110%;
+    width: 120%;
+    height: 120%;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.35;
+}
+
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
     text-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
 .hero-content p {
     font-size: 20px;
+    opacity: 0.85;
     margin-bottom: 30px;
-    opacity: 0.8;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
 }
 
 .btn {
-    padding: 12px 22px;
+    padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
     transition: 0.2s;
 }
 
@@ -222,37 +229,82 @@ html, body {
 }
 
 /* ============================================
-   SECTIONS
-================================================ */
+   GENEL SECTION
+============================================ */
 .section {
-    padding: 100px 10%;
+    padding: 90px 10%;
     text-align: center;
 }
 
 .section.dark {
-    background: #0d0d0d;
+    background: #090909;
 }
 
 .section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
+    font-size: 34px;
     font-weight: bold;
+    margin-bottom: 40px;
 }
 
 /* ============================================
-   SERVICES
-================================================ */
-.services-grid {
+   STATS (ANİMASYONLU SAYILAR)
+============================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ============================================
+   WHY US
+============================================ */
+.whyus-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 25px;
 }
 
-.service-box {
+.why-box {
     background: #111;
     border: 1px solid #222;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.why-box:hover {
+    border-color: #fff;
+}
+
+/* ============================================
+   SERVICES
+============================================ */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 25px;
+}
+
+.service-box {
+    background: #111;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 1px solid #222;
     transition: 0.2s;
 }
 
@@ -261,82 +313,7 @@ html, body {
 }
 
 /* ============================================
-   TEAM
-================================================ */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 25px;
-}
-
-/* ============================================
-   TIMELINE
-================================================ */
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.timeline-item {
-    background: #111;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    margin: 10px;
-}
-
-/* ============================================
-   PROJECT TRACKER
-================================================ */
-#tracker input {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 15px;
-}
-
-#projectResult {
-    margin-top: 20px;
-    font-size: 20px;
-}
-
-/* ============================================
-   FOOTER
-================================================ */
-.footer {
-    text-align: center;
-    padding: 40px;
-    background: #000;
-    border-top: 1px solid #222;
-    margin-top: 50px;
-}
-
-/* ============================================
-   RESPONSIVE
-================================================ */
-@media (max-width: 900px) {
-
-    .navbar nav {
-        display: none;
-    }
-
-    #mobileMenuBtn {
-        display: block;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-}
-/* ============================================
-   SLIDER (PORTFOLIO)
+   PORTFOLIO SLIDER
 ============================================ */
 .slider {
     position: relative;
@@ -355,7 +332,7 @@ html, body {
     min-width: 300px;
     height: 180px;
     background: #111;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #222;
     cursor: pointer;
@@ -372,7 +349,6 @@ html, body {
     transform: scale(1.05);
 }
 
-/* Slider Buttons */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -395,6 +371,118 @@ html, body {
 
 .slider-btn.left { left: 10px; }
 .slider-btn.right { right: 10px; }
+
+/* ============================================
+   TEAM
+============================================ */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 25px;
+}
+
+/* ============================================
+   TIMELINE
+============================================ */
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.timeline-item {
+    background: #111;
+    border: 1px solid #222;
+    padding: 15px 20px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+/* ============================================
+   FAQ (SSS)
+============================================ */
+.faq {
+    max-width: 700px;
+    margin: auto;
+}
+
+.faq-item {
+    background: #111;
+    border: 1px solid #222;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px 20px;
+    border-top: 1px solid #333;
+    font-size: 16px;
+}
+
+/* ============================================
+   CONTACT FORM
+============================================ */
+#contactForm {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+    padding: 40px;
+    text-align: center;
+    background: #000;
+    border-top: 1px solid #111;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ============================================
+   REVEAL ANİMASYONLARI
+============================================ */
+.section,
+.service-box,
+.why-box,
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
 
 /* ============================================
    LIGHTBOX
@@ -427,85 +515,29 @@ html, body {
     max-height: 90%;
     border: 2px solid #fff;
     border-radius: 8px;
-    box-shadow: 0 0 25px #fff;
-    z-index: 9999;
-    animation: popup 0.3s ease;
+    box-shadow: 0 0 20px #fff;
 }
 
 #lightbox-close {
     position: absolute;
     top: 40px;
     right: 40px;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
     color: #fff;
-    z-index: 10000;
-}
-
-@keyframes popup {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
 }
 
 /* ============================================
-   SCROLL REVEAL
+   RESPONSIVE
 ============================================ */
-.section,
-.service-box,
-.timeline-item {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.6s ease;
-}
+@media (max-width: 900px) {
 
-.section.show,
-.service-box.show,
-.timeline-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .navbar nav { display: none; }
+    #mobileMenuBtn { display: block; }
 
-/* ============================================
-   GLOW EFFECT (AAA)
-============================================ */
-.service-box,
-.team-card,
-.btn {
-    position: relative;
-    overflow: hidden;
-}
+    .hero-content h1 { font-size: 32px; }
+    .hero-content p { font-size: 16px; }
 
-.service-box::before,
-.team-card::before,
-.btn::before {
-    content: "";
-    position: absolute;
-    top: var(--y);
-    left: var(--x);
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
-}
-
-.service-box:hover::before,
-.team-card:hover::before,
-.btn:hover::before {
-    width: 200px;
-    height: 200px;
-}
-
-/* ============================================
-   MOBILE SLIDER
-============================================ */
-@media (max-width: 600px) {
-    .slide {
-        min-width: 240px;
-        height: 140px;
-    }
-
-    .slider-btn {
-        display: none;
-    }
+    .slide { min-width: 240px; height: 140px; }
+    .slider-btn { display: none; }
 }
