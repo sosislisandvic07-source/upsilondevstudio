@@ -13,6 +13,6 @@ window.addEventListener("load", () => {
             loader.style.display = "none";
         }, 500);
 
-    }, 500); // 0.5 saniye bekleme süresi (isteğe bağlı)
+    }, 1500); // 0.5 saniye bekleme süresi (isteğe bağlı)
 });
 
