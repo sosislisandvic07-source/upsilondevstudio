@@ -1,211 +1,175 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upsilon Dev Studio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon (logo) -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="logo">
-        <img src="assets/images/logo.png" alt="Logo">
-        <span>Upsilon Dev Studio</span>
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Upsilon Dev Studio yükleniyor...</p>
     </div>
-    <nav>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Bu site çerezleri yalnızca deneyiminizi iyileştirmek için kullanır.</p>
+        <button id="acceptCookies">Kabul Et</button>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Upsilon Logo">
+            <span>Upsilon Dev Studio</span>
+        </div>
+
+        <nav>
+            <a href="#hero">Ana Sayfa</a>
+            <a href="#services">Hizmetler</a>
+            <a href="#portfolio">Projeler</a>
+            <a href="#team">Ekip</a>
+            <a href="#process">Süreç</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            ☰
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#hero">Ana Sayfa</a>
         <a href="#services">Hizmetler</a>
-        <a href="#whyus">Neden Biz?</a>
-        <a href="#trust">Güven</a>
-        <a href="#faq">S.S.S</a>
-        <a href="#" class="btn-nav">Projeler</a>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Profesyonel Oyun Geliştirme Stüdyosu</h1>
-        <p>Build • Script • Mesh • GFX • Optimizasyon</p>
-        <a href="#" class="hero-btn">Projelerimizi Gör</a>
+        <a href="#portfolio">Projeler</a>
+        <a href="#team">Ekip</a>
+        <a href="#process">Süreç</a>
+        <a href="#contact">İletişim</a>
     </div>
-</section>
 
-<!-- HİZMETLER -->
-<section id="services" class="section">
-    <h2 class="section-title">Hizmetlerimiz</h2>
-    <div class="services-grid">
-
-        <div class="service-card">
-            <img src="assets/images/icons/build.png">
-            <h3>Build</h3>
-            <p>Profesyonel map, ortam, sahne ve yapı tasarımı.</p>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="parallax-bg">
+            <img src="assets/images/hero-bg.png" class="layer layer-back">
+            <img src="assets/images/grid-overlay.png" class="layer layer-mid">
         </div>
 
-        <div class="service-card">
-            <img src="assets/images/icons/script.png">
-            <h3>Script</h3>
-            <p>Optimize, hızlı ve sorunsuz çalışan kod altyapıları.</p>
-        </div>
+        <div class="hero-content">
+            <h1>Geleceğin oyunlarını bugün tasarlıyoruz.</h1>
+            <p>Yüksek kalite. Keskin sistemler. Uç seviyede optimize üretim.</p>
 
-        <div class="service-card">
-            <img src="assets/images/icons/mesh.png">
-            <h3>Mesh</h3>
-            <p>FPS dostu modelleme, optimize mesh üretimi.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="assets/images/icons/gfx.png">
-            <h3>GFX</h3>
-            <p>Profesyonel grafik tasarım ve oyun içi efektler.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- NEDEN BİZ -->
-<section id="whyus" class="section">
-    <h2 class="section-title">Neden Biz?</h2>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-            <h3>1) 7+ Yıllık Deneyim</h3>
-            <p>Her ekip üyesi kendi alanında uzman ve profesyoneldir.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>2) Yüksek Kalite Üretim Standardı</h3>
-            <p>Her proje performans, kalite ve deneyim açısından en iyi seviyede hazırlanır.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>3) Şeffaf ve Planlı Çalışma</h3>
-            <p>Kapsam, teslim ve fiyatlandırma başlangıçta net şekilde belirlenir.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>4) 3 Gün Ücretsiz Revizyon</h3>
-            <p>Teslim sonrası 3 gün sınırsız ve ücretsiz düzeltme desteği.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>5) FPS Odaklı Optimizasyon</h3>
-            <p>Lag azaltma, FPS artırma ve performans geliştirme.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>6) Güvenilir Kapora Sistemi</h3>
-            <p>Net, şeffaf ve iki tarafı da koruyan kapora politikası.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- GÜVEN -->
-<section id="trust" class="section">
-    <h2 class="section-title">Bize Nasıl Güvenirsiniz?</h2>
-
-    <div class="trust-box">
-
-        <div class="trust-item">
-            <h3>1) Şeffaf Çalışma Sistemi</h3>
-            <p>Tüm süreç başlangıçtan itibaren açık ve nettir.</p>
-        </div>
-
-        <div class="trust-item">
-            <h3>2) Kapora Politikası</h3>
-            <p>%25–%40 kapora; işe başlandıysa iade edilmez.</p>
-        </div>
-
-        <div class="trust-item">
-            <h3>3) 3 Gün Tam Destek</h3>
-            <p>Teslimden sonra 3 gün ücretsiz revizyon hakkı bulunur.</p>
-        </div>
-
-        <div class="trust-item">
-            <h3>4) Aktif Discord</h3>
-            <p>discord.gg/SFDJY9YGvS üzerinden iletişim.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- SSS -->
-<section id="faq" class="section">
-    <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-
-    <div class="faq-container">
-
-        <div class="faq">
-            <button class="faq-btn">Projeler ne kadar sürede tamamlanıyor?</button>
-            <div class="faq-panel">
-                <p>Maksimum 1 hafta. Projenin kapsamına göre daha da kısa sürede teslim edilebilir.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn primary">Projelerimizi Gör</a>
+                <a href="#contact" class="btn secondary">Bizimle İletişime Geç</a>
             </div>
         </div>
+    </section>
 
-        <div class="faq">
-            <button class="faq-btn">Ödeme yöntemleri neler?</button>
-            <div class="faq-panel">
-                <p>IBAN (Havale/EFT), Discord Nitro ve ItemSatış.</p>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <h2>Hizmetlerimiz</h2>
+
+        <div class="services-grid">
+
+            <div class="service-box">
+                <h3>Build</h3>
+                <p>Profesyonel sahne, ortam ve map tasarımı.</p>
             </div>
-        </div>
 
-        <div class="faq">
-            <button class="faq-btn">Revizyon hakkım var mı?</button>
-            <div class="faq-panel">
-                <p>Teslim sonrası 3 gün ücretsiz revizyon hakkı bulunmaktadır.</p>
+            <div class="service-box">
+                <h3>Script</h3>
+                <p>Optimize edilmiş, hızlı ve stabil sistem geliştirme.</p>
             </div>
-        </div>
 
-        <div class="faq">
-            <button class="faq-btn">Kapora nedir?</button>
-            <div class="faq-panel">
-                <p>Kapora %25-%40 arası alınır. İşe başlanmışsa iade edilmez. Maksimum %50 olabilir.</p>
+            <div class="service-box">
+                <h3>Mesh</h3>
+                <p>FPS dostu modelleme ve optimize mesh üretimi.</p>
             </div>
-        </div>
 
-        <div class="faq">
-            <button class="faq-btn">Optimizasyon yapıyor musunuz?</button>
-            <div class="faq-panel">
-                <p>Evet. FPS artırma, lag azaltma, script ve build optimizasyonu yapılır.</p>
+            <div class="service-box">
+                <h3>GFX</h3>
+                <p>Profesyonel grafik tasarım ve oyun içi efektler.</p>
             </div>
+
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section dark">
+        <h2>Projelerimiz</h2>
+        <div class="slider" id="portfolioSlider">
+            <!-- Slider içerikleri JS ile yüklenecek -->
+        </div>
+    </section>
 
-<!-- LOGOLAR -->
-<section class="tech section">
-    <h2 class="section-title">Kullandığımız Teknolojiler</h2>
-    <div class="tech-logos">
-        <img src="assets/images/icons/roblox.png">
-        <img src="assets/images/icons/blender.png">
-        <img src="assets/images/icons/studio.png">
-        <img src="assets/images/icons/vscode.png">
-        <img src="assets/images/icons/github.png">
-        <img src="assets/images/icons/discord.png">
-    </div>
-</section>
+    <!-- TEAM -->
+    <section id="team" class="section">
+        <h2>Ekibimiz</h2>
+        <div class="team-grid" id="teamGrid">
+            <!-- JS ile eklenecek -->
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-left">
-        <h3>Upsilon Dev Studio</h3>
-        <p>Bu sitedeki tüm içerikler Upsilon Dev Studio’ya aittir. İzinsiz kullanılamaz.</p>
-        <p>© 2025 Upsilon Dev Studio | Tüm Hakları Saklıdır.</p>
-    </div>
+    <!-- PROCESS / TIMELINE -->
+    <section id="process" class="section dark">
+        <h2>Çalışma Sürecimiz</h2>
 
-    <div class="footer-right">
-        <h3>İletişim</h3>
-        <p>Discord: <strong>discord.gg/SFDJY9YGvS</strong></p>
-        <p>Operasyon Merkezi: Türkiye</p>
-    </div>
-</footer>
+        <div class="timeline">
+            <div class="timeline-item">Başvuru alındı</div>
+            <div class="timeline-item">Proje analizi</div>
+            <div class="timeline-item">Tasarım & Geliştirme</div>
+            <div class="timeline-item">Optimize işlemleri</div>
+            <div class="timeline-item">Son kontroller</div>
+            <div class="timeline-item">Teslim</div>
+        </div>
+    </section>
 
-<script src="assets/js/main.js"></script>
+    <!-- PROJECT TRACKER PLACEHOLDER -->
+    <section id="tracker" class="section">
+        <h2>Proje Takip</h2>
+        <input type="text" id="projectID" placeholder="Proje ID girin...">
+        <button class="btn primary" onclick="checkProject()">Durumu Göster</button>
+
+        <div id="projectResult"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dark">
+        <h2>İletişim</h2>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Adınız" required>
+            <input type="text" name="discord" placeholder="Discord kullanıcı adınız" required>
+            <textarea name="message" placeholder="Mesajınız" required></textarea>
+            <button class="btn primary">Gönder</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Tüm hakları saklıdır © 2025 Upsilon Dev Studio</p>
+        <p>Discord: <a href="https://discord.gg/SFDJY9YGvS" target="_blank">Sunucumuza Katılın</a></p>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/cookie.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/webhook.js"></script>
 
 </body>
 </html>
+
