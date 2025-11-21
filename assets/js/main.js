@@ -1,55 +1,93 @@
-// ================= FAQ Aç/Kapa =====================
+/* ============================================
+   MOBILE MENU
+============================================ */
+const mobileBtn = document.getElementById("mobileMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-const faqButtons = document.querySelectorAll(".faq-btn");
+mobileBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+});
 
-faqButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
 
-        const panel = btn.nextElementSibling;
+/* ============================================
+   PARALLAX HERO
+============================================ */
+document.addEventListener("mousemove", (e) => {
+    const layers = document.querySelectorAll(".layer");
 
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
+    layers.forEach((layer) => {
+        const speed = layer.getAttribute("data-speed") || 0.02;
+        const x = (window.innerWidth - e.pageX * speed) / 100;
+        const y = (window.innerHeight - e.pageY * speed) / 100;
+
+        layer.style.transform = `translate(${x}px, ${y}px)`;
     });
 });
 
 
-// ================= Smooth Scroll =====================
+/* ============================================
+   PROJECT TRACKER
+============================================ */
+async function checkProject() {
+    const id = document.getElementById("projectID").value.trim();
+    const output = document.getElementById("projectResult");
 
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-        if (link.getAttribute("href").startsWith("#")) {
-            e.preventDefault();
-
-            const id = link.getAttribute("href");
-            const section = document.querySelector(id);
-
-            if (!section) return;
-
-            window.scrollTo({
-                top: section.offsetTop - 80,
-                behavior: "smooth"
-            });
-        }
-    });
-});
-
-
-// ================= Navbar Scroll Efekti =====================
-
-window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-
-    if (window.scrollY > 50) {
-        navbar.style.background = "rgba(0,0,0,0.8)";
-        navbar.style.backdropFilter = "blur(20px)";
-    } else {
-        navbar.style.background = "rgba(0,0,0,0.6)";
-        navbar.style.backdropFilter = "blur(10px)";
+    if (!id) {
+        output.innerHTML = "Lütfen geçerli bir Proje ID girin.";
+        return;
     }
+
+    try {
+        const res = await fetch("assets/data/projects.json");
+        const data = await res.json();
+
+        if (!data[id]) {
+            output.innerHTML = "Proje bulunamadı!";
+            return;
+        }
+
+        const p = data[id];
+
+        output.innerHTML = `
+            <strong>${id}</strong> Proje Durumu:
+            <br><br>
+            <strong>Durum:</strong> ${p.status} <br>
+            <strong>İlerleme:</strong> %${p.progress}
+        `;
+    } catch (err) {
+        output.innerHTML = "Sunucu hatası.";
+    }
+}
+
+
+/* ============================================
+   CONTACT FORM → DISCORD WEBHOOK
+============================================ */
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const data = {
+            name: form.name.value,
+            discord: form.discord.value,
+            message: form.message.value,
+        };
+
+        await fetch("assets/js/webhook.js"); // Yükleme
+
+        sendWebhook(data);
+
+        alert("Mesajınız gönderildi!");
+        form.reset();
+    });
 });
 
+
+/* ============================================
+   ANIMATIONS / SLIDERS / LIGHTBOX
+============================================ */
+if (typeof initAnimations === "function") initAnimations();
+if (typeof initSlider === "function") initSlider();
+if (typeof initLightbox === "function") initLightbox();
