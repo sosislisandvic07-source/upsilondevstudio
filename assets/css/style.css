@@ -153,7 +153,7 @@ html, body {
    HERO
 ============================================ */
 .hero {
-    height: 100vh;
+    height: 60vh;
     position: relative;
     display: flex;
     justify-content: center;
