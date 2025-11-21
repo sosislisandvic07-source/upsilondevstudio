@@ -1,27 +1,25 @@
-/* ============================================
-   PORTFOLIO SLIDER (AAA)
-============================================ */
-
 function initSlider() {
     const slider = document.getElementById("portfolioSlider");
 
-    // Klasördeki resim isimleri (sen ekledikçe buraya yazacaksın)
     const images = [
         "portfolio1.jpg",
         "portfolio2.jpg",
         "portfolio3.jpg",
         "portfolio4.jpg",
-        "portfolio5.jpg",
+        "portfolio5.jpg"
     ];
 
-    // Slider HTML üretimi
     slider.innerHTML = `
         <div class="slider-track" id="sliderTrack">
-            ${images.map(img => `
+            ${images
+                .map(
+                    (img) => `
                 <div class="slide">
                     <img src="assets/images/portfolio/${img}" class="slide-img">
                 </div>
-            `).join("")}
+            `
+                )
+                .join("")}
         </div>
 
         <button class="slider-btn left" id="slideLeft">❮</button>
@@ -48,9 +46,7 @@ function initSlider() {
         updateSlider();
     });
 
-    /* ---------------------------------------
-       MOBIL PARMAK KAYDIRMA DESTEĞİ
-    ---------------------------------------- */
+    // Touch swipe
     let startX = 0;
 
     track.addEventListener("touchstart", (e) => {
@@ -59,14 +55,9 @@ function initSlider() {
 
     track.addEventListener("touchend", (e) => {
         const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
 
-        if (diff > 50 && index < images.length - 1) { 
-            index++; 
-        } 
-        else if (diff < -50 && index > 0) { 
-            index--; 
-        }
+        if (startX - endX > 40 && index < images.length - 1) index++;
+        if (endX - startX > 40 && index > 0) index--;
 
         updateSlider();
     });
