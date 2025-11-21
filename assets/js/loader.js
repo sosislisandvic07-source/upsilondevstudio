@@ -1,7 +1,3 @@
-/* ============================================
-   LOADER (Yüklenme Ekranı)
-============================================ */
-
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
 
@@ -12,7 +8,5 @@ window.addEventListener("load", () => {
         setTimeout(() => {
             loader.style.display = "none";
         }, 500);
-
-    }, 1500); // 0.5 saniye bekleme süresi (isteğe bağlı)
+    }, 500);
 });
-
