@@ -1,56 +1,70 @@
 /* ============================================
-   ANIMASYON MOTORU (AAA)
-   Fade-In, Scroll Trigger, Glow, Reveal
+   REVEAL on Scroll
 ============================================ */
 
-function initAnimations() {
+function reveal() {
+    const reveals = document.querySelectorAll(".section, .service-box, .why-box, .timeline-item");
 
-    /* ----------------------------
-       Hero Fade-In
-    ----------------------------- */
-    const heroContent = document.querySelector(".hero-content");
-    setTimeout(() => {
-        heroContent.style.opacity = "1";
-        heroContent.style.transform = "translateY(0)";
-    }, 300);
-
-
-    /* ----------------------------
-       Scroll Fade-In Animations
-    ----------------------------- */
-    const revealElements = document.querySelectorAll(".section, .service-box, .timeline-item");
-
-    function checkReveal() {
-        const triggerPoint = window.innerHeight * 0.85;
-
-        revealElements.forEach((el) => {
-            const rect = el.getBoundingClientRect();
-
-            if (rect.top < triggerPoint) {
-                el.classList.add("show");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", checkReveal);
-    checkReveal();
-
-
-    /* ----------------------------
-       Neon Hover Glow
-    ----------------------------- */
-    const glowTargets = document.querySelectorAll(".service-box, .team-card, .btn");
-
-    glowTargets.forEach((el) => {
-        el.addEventListener("mousemove", function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            this.style.setProperty("--x", `${x}px`);
-            this.style.setProperty("--y", `${y}px`);
-        });
+    reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 120) {
+            el.classList.add("show");
+        }
     });
-
 }
 
+window.addEventListener("scroll", reveal);
+reveal();
+
+/* ============================================
+   COUNTERS (Stats)
+============================================ */
+
+const counters = document.querySelectorAll(".stat-number");
+let started = false;
+
+function startCounters() {
+    if (started) return;
+
+    const sectionPos = document.getElementById("stats").getBoundingClientRect().top;
+
+    if (sectionPos < window.innerHeight - 100) {
+        started = true;
+
+        counters.forEach((counter) => {
+            counter.innerText = "0";
+            const target = +counter.getAttribute("data-target");
+
+            const update = () => {
+                const current = +counter.innerText;
+                const increment = target / 100;
+
+                if (current < target) {
+                    counter.innerText = `${Math.ceil(current + increment)}`;
+                    setTimeout(update, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            update();
+        });
+    }
+}
+
+window.addEventListener("scroll", startCounters);
+
+/* ============================================
+   FAQ
+============================================ */
+
+document.querySelectorAll(".faq-question").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.style.display === "block";
+
+        document.querySelectorAll(".faq-answer").forEach((a) => (a.style.display = "none"));
+
+        answer.style.display = isOpen ? "none" : "block";
+    });
+});
