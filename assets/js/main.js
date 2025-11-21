@@ -1,93 +1,55 @@
 /* ============================================
-   MOBILE MENU
+   NAVBAR - Mobile Menu
 ============================================ */
+
 const mobileBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 mobileBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
+    mobileMenu.style.display =
+        mobileMenu.style.display === "flex" ? "none" : "flex";
 });
 
-
 /* ============================================
-   PARALLAX HERO
+   HERO Parallax Effect
 ============================================ */
-document.addEventListener("mousemove", (e) => {
-    const layers = document.querySelectorAll(".layer");
 
-    layers.forEach((layer) => {
-        const speed = layer.getAttribute("data-speed") || 0.02;
+document.addEventListener("mousemove", (e) => {
+    document.querySelectorAll(".layer").forEach((layer) => {
+        const speed = layer.getAttribute("data-speed");
         const x = (window.innerWidth - e.pageX * speed) / 100;
         const y = (window.innerHeight - e.pageY * speed) / 100;
 
-        layer.style.transform = `translate(${x}px, ${y}px)`;
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
 });
 
-
 /* ============================================
-   PROJECT TRACKER
+   FORM Gönderimi (webhook.js üzerinden)
 ============================================ */
-async function checkProject() {
-    const id = document.getElementById("projectID").value.trim();
-    const output = document.getElementById("projectResult");
 
-    if (!id) {
-        output.innerHTML = "Lütfen geçerli bir Proje ID girin.";
-        return;
-    }
+const contactForm = document.getElementById("contactForm");
 
-    try {
-        const res = await fetch("assets/data/projects.json");
-        const data = await res.json();
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-        if (!data[id]) {
-            output.innerHTML = "Proje bulunamadı!";
-            return;
-        }
+    const formData = {
+        name: contactForm.name.value,
+        discord: contactForm.discord.value,
+        message: contactForm.message.value,
+    };
 
-        const p = data[id];
+    sendWebhook(formData);
 
-        output.innerHTML = `
-            <strong>${id}</strong> Proje Durumu:
-            <br><br>
-            <strong>Durum:</strong> ${p.status} <br>
-            <strong>İlerleme:</strong> %${p.progress}
-        `;
-    } catch (err) {
-        output.innerHTML = "Sunucu hatası.";
-    }
-}
-
-
-/* ============================================
-   CONTACT FORM → DISCORD WEBHOOK
-============================================ */
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const data = {
-            name: form.name.value,
-            discord: form.discord.value,
-            message: form.message.value,
-        };
-
-        await fetch("assets/js/webhook.js"); // Yükleme
-
-        sendWebhook(data);
-
-        alert("Mesajınız gönderildi!");
-        form.reset();
-    });
+    contactForm.reset();
+    alert("Mesajınız gönderildi!");
 });
 
-
 /* ============================================
-   ANIMATIONS / SLIDERS / LIGHTBOX
+   Lightbox + Slider Initialize
 ============================================ */
-if (typeof initAnimations === "function") initAnimations();
-if (typeof initSlider === "function") initSlider();
-if (typeof initLightbox === "function") initLightbox();
+
+window.onload = () => {
+    initSlider();
+    initLightbox();
+};
