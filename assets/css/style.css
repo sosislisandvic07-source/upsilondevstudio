@@ -1,1 +1,249 @@
+/* ===== Genel Ayarlar ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
 
+body {
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #fff;
+}
+
+.btn-nav {
+    padding: 8px 16px;
+    background: #fff;
+    color: #000 !important;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    height: 80vh;
+    background: url("../images/hero-bg.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    z-index: 2;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 12px 25px;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    opacity: 0.8;
+}
+
+/* ===== BÖLÜM GENEL ===== */
+.section {
+    padding: 120px 80px;
+}
+
+.section-title {
+    font-size: 35px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ===== HİZMETLER ===== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #151515;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: #1d1d1d;
+}
+
+.service-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* ===== NEDEN BİZ ===== */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    background: #151515;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    background: #1d1d1d;
+    transform: translateY(-5px);
+}
+
+/* ===== GÜVEN ===== */
+.trust-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.trust-item {
+    background: #151515;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.trust-item:hover {
+    background: #1d1d1d;
+    transform: translateY(-4px);
+}
+
+/* ===== FAQ ===== */
+.faq-container {
+    width: 70%;
+    margin: auto;
+}
+
+.faq button {
+    width: 100%;
+    padding: 20px;
+    background: #202020;
+    border: none;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.faq-panel {
+    background: #111;
+    padding: 20px;
+    display: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ===== TEKNOLOJİ LOGOLARI ===== */
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tech-logos img {
+    width: 70px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.tech-logos img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 50px;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-left,
+.footer-right {
+    width: 45%;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 5px;
+    color: #bbb;
+}
